@@ -14,7 +14,7 @@ node() {
 
 	stage ('Release') {
 	    dir('resources') {
-            archiveArtifacts artifacts: '**', fingerprint: true
+            archiveArtifacts artifacts: '*csv', fingerprint: true
         }
 	    // echo "Current workspace is $WORKSPACE"
 	}
