@@ -2,6 +2,8 @@
 
 node() {
 	stage ('Checkout') {
+	    // the data for sample and csv was incorrect
+	    deleteDir()
 	    checkout scm
 	}
 
