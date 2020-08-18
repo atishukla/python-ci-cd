@@ -30,12 +30,10 @@ def convert_text_to_csv(all_files, location):
 
 
 def main():
-    location = os.path.join(os.path.split(__file__)[0], "resources")
+    location = os.path.join(sys.path[1], 'resources')
     all_files = list_all_dirs(location)
     convert_text_to_csv(all_files, location)
 
 
 if __name__ == '__main__':
     main()
-    # resource_path = os.path.join(os.path.split(__file__)[0], "resources")
-    # print(resource_path)
