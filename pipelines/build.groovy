@@ -11,4 +11,8 @@ node() {
 		    sh 'python src/text-to-csv.py'
 		}
 	}
+
+	stage ('Release') {
+	    echo "Current workspace is $WORKSPACE"
+	}
 }
