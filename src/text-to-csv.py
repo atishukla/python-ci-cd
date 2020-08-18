@@ -21,6 +21,11 @@ def list_all_dirs(location):
         sys.exit(1)
 
 
+def get_project_root():
+    from pathlib import Path
+    return Path(__file__).parent.parent
+
+
 def convert_text_to_csv(all_files, location):
     for file in all_files:
         new_filename = file.replace('.txt', '.csv')
@@ -30,7 +35,8 @@ def convert_text_to_csv(all_files, location):
 
 
 def main():
-    location = os.path.join(sys.path[1], 'resources')
+    project_root = get_project_root()
+    location = os.path.join(project_root, 'resources')
     all_files = list_all_dirs(location)
     convert_text_to_csv(all_files, location)
 
