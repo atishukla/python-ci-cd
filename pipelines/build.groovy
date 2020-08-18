@@ -13,6 +13,9 @@ node() {
 	}
 
 	stage ('Release') {
-	    echo "Current workspace is $WORKSPACE"
+	    dir('$WORKSPACE + /resources') {
+            archiveArtifacts artifacts: '**', fingerprint: true
+        }
+	    // echo "Current workspace is $WORKSPACE"
 	}
 }
