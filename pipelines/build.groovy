@@ -2,7 +2,7 @@
 
 node() {
 	stage ('Checkout') {
-	    // the data for sample and csv was incorrect
+	    // the data for sample and csv was incorrect clear workspace
 	    deleteDir()
 	    checkout scm
 	}
@@ -16,6 +16,7 @@ node() {
 
 	stage ('Release') {
 	    dir('resources') {
+	        // Getting desired result as artifacts
             archiveArtifacts artifacts: '*csv', fingerprint: true
         }
 	    // echo "Current workspace is $WORKSPACE"
