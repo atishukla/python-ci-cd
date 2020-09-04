@@ -36,7 +36,8 @@ def convert_text_to_csv(all_files, location):
 
 def main():
     project_root = get_project_root()
-    location = os.path.join(project_root, 'resources')
+    # location = os.path.join(project_root, 'resources')
+    location = 'export/'
     all_files = list_all_dirs(location)
     convert_text_to_csv(all_files, location)
 

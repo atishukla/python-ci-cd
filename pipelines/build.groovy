@@ -14,11 +14,11 @@ node() {
 		}
 	}
 
-	stage ('Release') {
-	    dir('resources') {
-	        // Getting desired result as artifacts
-            archiveArtifacts artifacts: '*csv', fingerprint: true
-        }
-	    // echo "Current workspace is $WORKSPACE"
-	}
+	// stage ('Release') {
+	//     dir('resources') {
+	//         // Getting desired result as artifacts
+    //         archiveArtifacts artifacts: '*csv', fingerprint: true
+    //     }
+	//     // echo "Current workspace is $WORKSPACE"
+	// }
 }
