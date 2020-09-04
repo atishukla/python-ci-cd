@@ -3,7 +3,7 @@
 node() {
 	stage ('Checkout') {
 	    // the data for sample and csv was incorrect clear workspace
-	    deleteDir()
+	    // deleteDir()
 	    checkout scm
 	}
 
