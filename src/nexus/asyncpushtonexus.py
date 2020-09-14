@@ -3,6 +3,8 @@ import asyncio
 import aiohttp
 from aiohttp import FormData
 
+# https://number1.co.za/how-to-speed-up-http-calls-in-python-with-examples/
+
 NEXUS_BASE_URL = "http://192.168.199.9:8081/service/rest/v1/components"
 USERNAME = 'admin'
 PASSWORD = 'password'

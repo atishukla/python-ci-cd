@@ -28,24 +28,24 @@ def main():
         'http://emirates.com',
     ]
 
-    del_urls = []
-    for i in range(50):
-        del_urls.append('https://httpbin.org/delete')
+    # del_urls = []
+    # for i in range(50):
+    #     del_urls.append('https://httpbin.org/delete')
 
-    # with_future_requests(urls)
-    status = with_future_requests(del_urls)
-    print(status)
+    print(with_future_requests(urls))
+    # status = with_future_requests(del_urls)
+    # print(status)
 
 
 def with_future_requests(urls):
     titles = []
     with FuturesSession() as session:
-        futures = [session.delete(url) for url in urls]
+        futures = [session.get(url) for url in urls]
         for future in as_completed(futures):
             response = future.result()
-            # title = get_title(response)
-            # titles.append(title.text)
-            titles.append(response.status_code)
+            title = get_title(response)
+            titles.append(title.text)
+            # titles.append(response.status_code)
     return titles
 
 
