@@ -13,7 +13,8 @@ node() {
 
 	stage ('Executing build') {
 		docker.image('python:rc-slim').inside() {
-		    sh 'python src/main.py'
+		    sh 'pip install -r requirements.txt'
+		    sh 'python src/async/get_with_requests.py'
 		}
 	}
 
