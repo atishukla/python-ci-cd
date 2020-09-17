@@ -26,9 +26,6 @@ isort==4.3.21
 jdcal==1.4.1
 lazy-object-proxy==1.4.2
 lxml==4.4.1
-mkl-fft==1.0.15
-mkl-random==1.1.0
-mkl-service==2.3.0
 mock==4.0.2
 multidict==4.7.3
 numpy==1.18.1
