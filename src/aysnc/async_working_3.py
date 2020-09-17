@@ -16,7 +16,7 @@ async def fetch_all(urls):
     return results
 
 
-async def main(loop):
+async def main():
     base_url = 'https://jsonplaceholder.typicode.com/photos'
     urls = [base_url + f'/{i}' for i in range(1, 2000)]
     results = await fetch_all(urls)
@@ -29,7 +29,7 @@ if __name__ == '__main__':
 
     s = time.perf_counter()
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main(loop))  # change for 3.6 and below
+    loop.run_until_complete(main())  # change for 3.6 and below
 
     elapsed = time.perf_counter() - s
     print(f"Completed in {elapsed:0.2f} seconds")
