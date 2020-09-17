@@ -31,8 +31,8 @@ if __name__ == '__main__':
     import time
 
     s = time.perf_counter()
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main()) # change for 3.6 and below
-    # asyncio.run(main()) # This does not work with 3.6 and below
+    # loop = asyncio.get_event_loop()
+    # loop.run_until_complete(main())  # change for 3.6 and below
+    asyncio.run(main())  # This does not work with 3.6 and below
     elapsed = time.perf_counter() - s
     print(f"Completed in {elapsed:0.2f} seconds")
