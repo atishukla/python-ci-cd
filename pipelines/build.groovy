@@ -14,7 +14,7 @@ node() {
 	stage ('Executing build') {
 		docker.image('python:3.6').inside() {
 		    sh 'pip install -r requirements.txt'
-		    sh 'python src/aysnc/async_new_example_1.py'
+		    sh 'python src/aysnc/async_working_3.py'
 		}
 	}
 
